@@ -118,9 +118,10 @@
 
 <html>
 <head>
-	<title>This is my paper title</title>
+	<title>Memory-MambaNav</title>
 	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
-	<meta property="og:title" content="Creative and Descriptive Paper Title." />
+	<meta property="og:title" content="Memory-MambaNav: Enhancing Object-Goal Navigation through
+	Integration of Spatial-Temporal Scanning with State Space Models" />
 	<meta property="og:description" content="Paper description." />
 
 	<!-- Get from Google Analytics -->
@@ -138,29 +139,30 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Creative and Descriptive Paper Title</span>
+		<span style="font-size:36px">Memory-MambaNav: Enhancing Object-Goal Navigation through
+			Integration of Spatial-Temporal Scanning with State Space Models</span>
 		<table align=center width=600px>
 			<table align=center width=600px>
 				<tr>
-					<td align=center width=100px>
+					<!-- <td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">First Author</a></span>
+							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=i5YUH14AAAAJ&hl=zh-CN">Leyuan Sun</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Second Author</a></span>
+							<span style="font-size:24px"><a href="https://dblp.org/pid/40/9988.html">Yusuke Yoshiyasu</a></span>
 						</center>
-					</td>
-					<td align=center width=100px>
+					</td> -->
+					<!-- <td align=center width=100px>
 						<center>
 							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Third Author</a></span>
 						</center>
 					</td>
 				</tr>
 			</table>
-			<table align=center width=250px>
-				<tr>
+			<table align=center width=250px> -->
+				<!-- <tr>
 					<td align=center width=120px>
 						<center>
 							<span style="font-size:24px"><a href=''>[Paper]</a></span>
@@ -174,14 +176,14 @@
 				</tr>
 			</table>
 		</table>
-	</center>
+	</center> -->
 
 	<center>
 		<table align=center width=850px>
 			<tr>
 				<td width=260px>
 					<center>
-						<img class="round" style="width:500px" src="./resources/teaser.png"/>
+						<img class="round" style="width:500px" src="./resources/story.png"/>
 					</center>
 				</td>
 			</tr>
@@ -189,7 +191,7 @@
 		<table align=center width=850px>
 			<tr>
 				<td>
-					This was a template originally made for <a href="http://richzhang.github.io/colorization/">Colorful Image Colorization</a>. The code can be found in this <a href="https://github.com/richzhang/webpage-template">repository</a>.
+					The proposed Memory-MambaNav can reduce the GPU memory up tp <b>67.5%</b> comapred with Transformer-based memory accumulated approach.
 				</td>
 			</tr>
 		</table>
@@ -208,22 +210,161 @@
 	<br>
 
 	<hr>
-	<center><h1>Talk</h1></center>
-	<p align="center">
-		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
-	</p>
-
-	<table align=center width=800px>
-		<br>
+	<center><h1>Demonstrations</h1></center>
+	<div style="text-align: center; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap;">
+		<div style="margin: 10px;">
+			<p><b>VTNet, ICLR 2021</b></p>
+			<video width="190" height="190" controls autoplay>
+				<source src="./resources/kitchenvtnet.mov" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<div style="margin: 10px;">
+			<p><b>IOM, ACM MM 2023</b></p>
+			<video width="190" height="190" controls autoplay>
+				<source src="./resources/kitcheniom.mov" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<div style="margin: 10px;">
+			<p><b>MT, ICLR 2023</b></p>
+			<video width="190" height="190" controls autoplay>
+				<source src="./resources/kitchenmt.mov" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<div style="margin: 10px;">
+			<p><b>Ours, M8-MambaNav</b></p>
+			<video width="190" height="190" controls autoplay>
+				<source src="./resources/kitchenm8.mov" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<div style="margin: 10px;">
+			<p><b>Ours, M24-MambaNav</b></p>
+			<video width="190" height="190" controls autoplay>
+				<source src="./resources/kitchenm24.mov" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+	</div>
+	<table align=center>
 		<tr>
-			<center>
-				<span style="font-size:28px"><a href=''>[Slides]</a>
-				</span>
-			</center>
+			<td>
+				<b>Kitchen</b>
+			</td>
+		</tr>
+	</table align=center>
+
+	<div style="text-align: center; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap;">
+		<div style="margin: 10px;">
+			<!-- <p>VTNet, ICLR 2021</p> -->
+			<video width="190" height="190" controls autoplay>
+				<source src="./resources/bedroomvtnet.mov" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<div style="margin: 10px;">
+			<!-- <p>IOM, ACM MM 2023</p> -->
+			<video width="190" height="190" controls autoplay>
+				<source src="./resources/bedroomiom.mov" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<div style="margin: 10px;">
+			<!-- <p>MT, ICLR 2023</p> -->
+			<video width="190" height="190" controls autoplay>
+				<source src="./resources/bedroommt.mov" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<div style="margin: 10px;">
+			<!-- <p>Ours, M8-MambaNav</p> -->
+			<video width="190" height="190" controls autoplay>
+				<source src="./resources/bedroomm8.mov" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<div style="margin: 10px;">
+			<!-- <p>Ours, M24-MambaNav</p> -->
+			<video width="190" height="190" controls autoplay>
+				<source src="./resources/bedroomm24.mov" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+	</div>
+	<table align=center>
+		<tr>
+			<td>
+				<b>Bedroom</b>
+			</td>
+		</tr>
+	</table align=center>
+
+
+	<div style="text-align: center; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap;">
+		<div style="margin: 10px;">
+			<!-- <p>VTNet, ICLR 2021</p> -->
+			<video width="190" height="190" controls autoplay>
+				<source src="./resources/livingvtnet.mov" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<div style="margin: 10px;">
+			<!-- <p>IOM, ACM MM 2023</p> -->
+			<video width="190" height="190" controls autoplay>
+				<source src="./resources/livingiom.mov" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<div style="margin: 10px;">
+			<!-- <p>MT, ICLR 2023</p> -->
+			<video width="190" height="190" controls autoplay>
+				<source src="./resources/livingmt.mov" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<div style="margin: 10px;">
+			<!-- <p>Ours, M8-MambaNav</p> -->
+			<video width="190" height="190" controls autoplay>
+				<source src="./resources/livingm8.mov" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<div style="margin: 10px;">
+			<!-- <p>Ours, M24-MambaNav</p> -->
+			<video width="190" height="190" controls autoplay>
+				<source src="./resources/livingm24.mov" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+	</div>
+	<table align=center>
+		<tr>
+			<td>
+				<b>Living room</b>
+			</td>
+		</tr>
+	</table align=center>
+	<hr>
+	<table align=center width=850px>
+		<tr>
+			<td width=260px>
+				<center>
+					<img class="round" style="width:900px" src="./resources/traj.png"/>
+				</center>
+			</td>
 		</tr>
 	</table>
+	<table align=center>
+		<tr>
+			<td>
+				<b>Trajetory comparisons</b>
+			</td>
+		</tr>
+	</table align=center>
 	<hr>
-
+<!-- 
 	<center><h1>Code</h1></center>
 
 	<table align=center width=420px>
@@ -258,9 +399,9 @@
 			<span style="font-size:28px">&nbsp;<a href='https://github.com/richzhang/webpage-template'>[GitHub]</a>
 			</center>
 		</span>
-	</table>
+	</table> -->
 	<br>
-	<hr>
+	<!-- <hr> -->
 	<table align=center width=450px>
 		<center><h1>Paper and Supplementary Material</h1></center>
 		<tr>
