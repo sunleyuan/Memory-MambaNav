@@ -141,10 +141,12 @@
 	<center>
 		<span style="font-size:36px">Memory-MambaNav: Enhancing Object-Goal Navigation through
 			Integration of Spatial-Temporal Scanning with State Space Models</span>
+			<br> <!-- 这里添加一个或多个<br>标签来增加空行 -->
+		<br> <!-- 这里添加一个或多个<br>标签来增加空行 -->
 		<table align=center width=600px>
 			<table align=center width=600px>
 				<tr>
-					<!-- <td align=center width=100px>
+					<td align=center width=100px>
 						<center>
 							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=i5YUH14AAAAJ&hl=zh-CN">Leyuan Sun</a></span>
 						</center>
@@ -153,31 +155,37 @@
 						<center>
 							<span style="font-size:24px"><a href="https://dblp.org/pid/40/9988.html">Yusuke Yoshiyasu</a></span>
 						</center>
-					</td> -->
+					</td>
 					<!-- <td align=center width=100px>
 						<center>
 							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Third Author</a></span>
 						</center>
 					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Fourth Author</a></span>
+						</center>
+					</td> -->
 				</tr>
 			</table>
-			<table align=center width=250px> -->
-				<!-- <tr>
-					<td align=center width=120px>
+			<table align=center width=250px>
+				<tr>
+					<!-- <td align=center width=120px>
 						<center>
 							<span style="font-size:24px"><a href=''>[Paper]</a></span>
 						</center>
-					</td>
-					<td align=center width=120px>
+					</td> -->
+					<!-- <td align=center width=120px>
 						<center>
 							<span style="font-size:24px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
 						</center>
-					</td>
+					</td> -->
 				</tr>
 			</table>
 		</table>
-	</center> -->
-
+	</center>
+	<br> <!-- 这里添加一个或多个<br>标签来增加空行 -->
+	<hr>
 	<center>
 		<table align=center width=850px>
 			<tr>
@@ -190,8 +198,8 @@
 		</table>
 		<table align=center width=850px>
 			<tr>
-				<td>
-					The proposed Memory-MambaNav can reduce the GPU memory up tp <b>67.5%</b> comapred with Transformer-based memory accumulated approach.
+				<td style="text-align: center;">
+					The proposed Memory-MambaNav can reduce the GPU memory up tp <b>67.5%</b> comapred with Transformer-based memory accumulated approach when computing over 32 historical frames.
 				</td>
 			</tr>
 		</table>
@@ -203,7 +211,7 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				This is my abstract.
+				Object-goal Navigation (ObjectNav) involves locating a specific target object instance using a textual command combined with semantic understanding in an unknown environment. This requires the embodied agent to have advanced spatial and temporal feature comprehension. While earlier approaches made progress in spatial modeling, they fell short in effectively utilizing episodic temporal historical memory (e.g., keeping track of explored and unexplored space), as long-horizon memory knowledge is resource-intensive in both storage and training. To address this issue, this paper introduces the Memory-MambaNav model, which employs multiple Mamba-based layers for refined spatial-temporal modeling. Leveraging the Mamba architecture, known for its global receptive field and linear complexity, Memory-MambaNav can efficiently extract and process memory knowledge from accumulated historical observations. To enhance spatial modeling, we introduce the Memory Spatial Difference State Space Model (MSD-SSM) to address the limitations of previous CNN and Transformer-based models in terms of field of view and computational demand. For temporal modeling, the proposed Memory Temporal Serialization SSM (MTS-SSM) leverages Mamba's temporal scanning capabilities, enhancing the model's temporal understanding and interaction with bi-temporal features. We also integrate egocentric obstacle-awareness embeddings and memory-based fine-grained rewards into our end-to-end policy training, which improve obstacle understanding and accelerate convergence by fully utilizing memory knowledge. Our experiments on the AI2-Thor dataset confirm the benefits and superior performance of proposed Memory-MambaNav, demonstrating Mamba's potential in ObjectNav, particularly in long-horizon trajectories.
 			</td>
 		</tr>
 	</table>
@@ -364,6 +372,57 @@
 		</tr>
 	</table align=center>
 	<hr>
+	<!-- <hr> -->
+	<center><h1>Encoder-spatial and Decoder-temproal attention visulizations </h1></center>
+	<center>
+		<div style="display: flex; justify-content: center; align-items: center;">
+			<div style="text-align: center;"> <!-- 为了使图片和文本居中对齐 -->
+				<video width="460" height="380" controls style="margin-right: 20px;">
+					<source src="./resources/tematt.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<p>M8-MamabNav, successfully fininsed with 7 steps</p> <!-- 为第二张图片添加注释 -->
+			</div>
+			<div style="text-align: center;"> <!-- 为了使图片和文本居中对齐 -->
+				<div style="text-align: center;"> <!-- 为了使图片和文本居中对齐 -->
+					<img class="round" style="width:400px" src="./resources/att_vis.png"/>
+					<p>Up: spatial attention, Bottom: Temporal attention (the lastest at the bottom)</p> <!-- 为第三张图片添加注释 -->
+				</div>
+				<!-- <p>Find tv_monitor</p> 为第三张图片添加注释 -->
+			</div>
+		</div>
+	</center>
+
+	<hr>
+
+	<!-- <hr> -->
+	<center><h1>Temporal attention in long trajectory </h1></center>
+	<center>
+		<div style="display: flex; justify-content: center; align-items: center;">
+			<div style="text-align: center;"> <!-- 为了使图片和文本居中对齐 -->
+				<video width="460" height="480" controls style="margin-right: 20px;">
+					<source src="./resources/longtematt2.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<p>M24-MamabaNav, successfully finished with 50 steps</p> <!-- 为第二张图片添加注释 -->
+			</div>
+			<div style="text-align: center;"> <!-- 为了使图片和文本居中对齐 -->
+				<div style="text-align: left;"> <!-- 为了使图片和文本居中对齐 -->
+					<img class="round" style="width:400px"  src="./resources/long_att.png"/>
+					<ul>
+						<li>The latest observations usually receive the highest attention.</li>
+						<li>The fewer objects that have been detected, the less attention they receive, e.g., a wall.</li>
+						<li>When the target-realted area has been seen, it receives high attention and is remembered.</li>
+						<li>Sometimes high attentions are in the blank memory grids.</li>
+					</ul>
+				</div>
+				<!-- <p>Find tv_monitor</p> 为第三张图片添加注释 -->
+			</div>
+		</div>
+	</center>
+
+	<hr>
+	
 <!-- 
 	<center><h1>Code</h1></center>
 
@@ -403,14 +462,16 @@
 	<br>
 	<!-- <hr> -->
 	<table align=center width=450px>
-		<center><h1>Paper and Supplementary Material</h1></center>
+		<center><h1>Paper Submission</h1></center>
 		<tr>
-			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-			<td><span style="font-size:14pt">F. Author, S. Author, T. Author.<br>
-				<b>Creative and Descriptive Paper Title.</b><br>
-				In Conference, 20XX.<br>
-				(hosted on <a href="">ArXiv</a>)<br>
+			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/MMNav.png"/></a></td>
+			<td><span style="font-size:14pt">Leyuan Sun and Yusuke Yoshiyasu<br>
+				<b>Memory-MambaNav: Enhancing Object-Goal Navigation through Integration of Spatial-Temporal Scanning with State Space Models</b><br>
+				Submit to Elesiver, Image and Vision Computing <br>
+				2024 Imapct Factor: 4.2<br>
+				(Special issue: <a href="https://www.sciencedirect.com/special-issue/10QS2C2R48F">Embodied Artificial Intelligence for Robotic Vision and Navigation</a>)<br>
 				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
+				<a href="https://www.scimagojr.com/journalsearch.php?q=25549&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank"><img border="0" src="https://www.scimagojr.com/journal_img.php?id=25549" alt="SCImago Journal &amp; Country Rank"  /></a>
 				<span style="font-size:4pt"><a href=""><br></a>
 				</span>
 			</td>
@@ -418,13 +479,13 @@
 	</table>
 	<br>
 
-	<table align=center width=600px>
+	<!-- <table align=center width=600px>
 		<tr>
 			<td><span style="font-size:14pt"><center>
 				<a href="./resources/bibtex.txt">[Bibtex]</a>
 			</center></td>
 		</tr>
-	</table>
+	</table> -->
 
 	<hr>
 	<br>
